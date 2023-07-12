@@ -8,4 +8,5 @@ class Bread(models.Model):
     trainability = models.IntegerField()
     sheddingamount = models.IntegerField()
     exerciseneeds = models.IntegerField()
-    
+    def __str__(self):
+        return self.name
