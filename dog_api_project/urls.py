@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from dog_app.views import BreadDetail, BreadList
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/breads/', BreadList.as_view()),
+    path('api/breads/<int:pk>', BreadDetail.as_view()),
 ]
