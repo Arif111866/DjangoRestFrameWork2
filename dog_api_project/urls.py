@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from dog_app.views import BreadDetail, BreadList
+from dog_app.views import DogDetail , DogList
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/breads/', BreadList.as_view()),
     path('api/breads/<int:pk>', BreadDetail.as_view()),
+    path('api/dogs/', DogList.as_view()),
+    path('api/dogs/<int:pk>', DogDetail.as_view()),
 ]
